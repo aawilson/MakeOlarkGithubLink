@@ -1,0 +1,6 @@
+A dead-simple plugin to make a github link. Adds a command to the palette called Make Olark Github Link, which when executed will show you the generated link and let you copy it to your clipboard.
+
+
+TODO:
+        Remove all the stuff from the GitCommand code I copypasta'd that isn't actually used in this project.
+	Make it intelligent somehow about finding the project directory. Right now it's kind of this hard-coded thing.
