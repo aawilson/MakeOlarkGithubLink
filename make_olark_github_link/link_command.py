@@ -15,7 +15,6 @@ class MakeOlarkGithubLink(GitTextCommand, sublime_plugin.TextCommand):
     def run(self, edit):
         file_name = self.view.file_name()
 
-        foo = 1
         projdir = "olark\\projects\\"
         if projdir not in file_name:
             return

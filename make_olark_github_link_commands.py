@@ -18,7 +18,6 @@ if sys.version_info >= (3,):
     mod_prefix = 'MakeOlarkGithubLink.' + mod_prefix
     from imp import reload
 
-# Modules have to be reloaded in dependency order. So list 'em here:
 mods_load_order = [
     '',
     '.make_olark_github_link.command_thread',
@@ -46,3 +45,8 @@ try:
 except (ImportError, ValueError):
     # Python 2
     from make_olark_github_link.link_command import MakeOlarkGithubLink
+
+
+__all__ = [
+    MakeOlarkGithubLink,
+]
