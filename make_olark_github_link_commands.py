@@ -20,11 +20,15 @@ if sys.version_info >= (3,):
 
 mods_load_order = [
     '',
-    '.make_olark_github_link.command_thread',
-    '.make_olark_github_link.link_command',
+    '.command_thread',
+    '.link_command',
 ]
 
-reload_mods = [mod for mod in sys.modules if mod[0:3] in ('make_olark_github_link', 'MakeOlarkGithubLink') and sys.modules[mod] is not None]
+reload_mods = []
+
+for mod in sys.modules:
+    if any([mod.startswith('make_olark_github_link'), mod.startswith('MakeOlarkGithubLink')]) and sys.modules[mod] is not None:
+        reload_mods.append(mod)
 
 reloaded = []
 
